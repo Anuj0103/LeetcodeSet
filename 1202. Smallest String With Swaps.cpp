@@ -4,7 +4,7 @@ public:
     vector<vector<int>>graph;
     vector<bool>visited;
     
-    void dfs(int i,vector<int>&index,vector<int>&letter,string s){
+    void dfs(int i,vector<int>&index,vector<char>&letter,string &s){
         visited[i]=true;
         index.push_back(i);
         letter.push_back(s[i]);
@@ -32,7 +32,7 @@ public:
         for(int i=0;i<n;i++)
         {
             vector<int>index;
-            vector<int>letter;
+            vector<char>letter;
             if(!visited[i])
             {
                 dfs(i,index,letter,s);
